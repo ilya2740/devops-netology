@@ -7,3 +7,6 @@ File that will be ignored during commit because they are  pointed  out in  file 
 3. Files that contains sensitive data  ( .tfvars , .tfvars.json )
 4. Files  that override  config   (override.tf)
 5. Configuration  files ( terraform.rc ) 
+
+
+Lesson "Git Basics"
