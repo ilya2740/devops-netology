@@ -92,6 +92,7 @@ resource "docker_container" "nginx" {
   
   
  **Ошибка 4** 
+ 
  Неправильно. Неверно указана последняя буква в строке   name  = "example_${random_password.random_string_fake.resuld}". Нужно указать букву t .
   
  Правильно. 
