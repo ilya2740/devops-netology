@@ -27,6 +27,7 @@ on linux_amd64
 **Ошибка 1**
 
 Неправильно (отсутствует лабел. добавил лабел "nginx" ) :
+
 resource "docker_image"  {
   name         = "nginx:latest"
   keep_locally = true
@@ -42,11 +43,13 @@ resource "docker_image" "nginx" {
 **Ошибка 2**
 
 Неправильно (название лейбла должно начинаться с буквы или подчеркивания, "1nginx" начинается с цифры 1  ):
+
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
 
 Правильно:
+
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
@@ -55,6 +58,7 @@ resource "docker_container" "nginx" {
 **Ошибка 3**
 
 Неправильно (строка resource "random_password" "random_string" не совпадает со строкой  name  = "example_${random_password.random_string_fake.resuld}" хотя можно изменить строку  ):
+
 name  = "example_${random_password.random_string_fake.resuld}"  по аналогии с resource "random_password" "random_string" т.е сделать name  = "example_${random_password.random_string.resuld}" 
 
 resource "random_password" "random_string" {
