@@ -38,7 +38,7 @@ resource "docker_image"  {
   keep_locally = true
 }
 
-Правильно:
+Правильно:  
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = true
@@ -47,13 +47,13 @@ resource "docker_image" "nginx" {
 
 **Ошибка 2**
 
-Неправильно (название лейбла должно начинаться с буквы или подчеркивания, "1nginx" начинается с цифры 1  ):
+Неправильно (название лейбла должно начинаться с буквы или подчеркивания, "1nginx" начинается с цифры 1  ):  
 
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
 
-Правильно:
+Правильно:  
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
