@@ -1,13 +1,15 @@
 
 # Домашнее задание к занятию «Введение в Terraform»
 
+Пытался отредактировать текст как указано здесь  https://gist.github.com/Jekins/2bf2d0638163f1294637
+По другому не знаю как сделать.
+
 Terraform  установлен.
 
-root@TestDebian11:/opt/terraform# terraform --version
-Terraform v1.5.1
+$ terraform --version
+Terraform v1.5.2
 on linux_amd64
-+ provider registry.terraform.io/hashicorp/random v3.5.1
-+ provider registry.terraform.io/kreuzwerker/docker v3.0.2
+Принт скрин добавил отдельным файлом к ответу на задание.
 
 
 
@@ -113,7 +115,7 @@ resource "docker_container" "nginx" {
 
 При применении комманды   terraform apply  ключом -auto-approve  не будет возможности ознакомится с теми изменениями которые планируется применить при создании инфраструктуры. Все изменения будут применены автоматически, не нужно будет подтверждать применение изменений (approve) и набирать комманду "yes".
 
-**root@TestDebian11:/opt/terraform# docker ps**
+**docker ps**
 **CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES**
 **543c1ad37c66   a7be6198544f   "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:8000->80/tcp   example_9hC1T4SAmr5fOtxR**
 
