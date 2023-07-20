@@ -1,12 +1,12 @@
 
 # Домашнее задание к занятию «Введение в Terraform»
 
-Пытался отредактировать текст как указано здесь  https://gist.github.com/Jekins/2bf2d0638163f1294637
+Пытался отредактировать текст как указано здесь  https://gist.github.com/Jekins/2bf2d0638163f1294637  
 По другому не знаю как сделать.
 
-Terraform  установлен.
+Terraform  установлен.  
 
-$ terraform --version
+$ terraform --version  
 Terraform v1.5.2
 on linux_amd64
 Принт скрин добавил отдельным файлом к ответу на задание.
