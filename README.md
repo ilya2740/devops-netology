@@ -7,8 +7,8 @@
 Terraform  установлен.  
 
 $ terraform --version  
-Terraform v1.5.2
-on linux_amd64
+Terraform v1.5.2  
+on linux_amd64  
 Принт скрин добавил отдельным файлом к ответу на задание.
 
 
