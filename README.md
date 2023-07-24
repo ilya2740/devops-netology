@@ -30,10 +30,10 @@ Terraform  установлен.
 
 Неправильно (отсутствует лабел. добавил лабел "nginx" ) :
 
-`resource "docker_image"  {
+```resource "docker_image"  {
   name         = "nginx:latest"
   keep_locally = true
-}`
+}```
 
 Правильно:  
 resource "docker_image" "nginx" {
