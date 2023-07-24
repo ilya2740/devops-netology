@@ -48,24 +48,24 @@ resource "docker_image" "nginx" {
 **Ошибка 2**
 
 Неправильно (название лейбла должно начинаться с буквы или подчеркивания, "1nginx" начинается с цифры 1  ):  
-
+```
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
-
+```
 Правильно:  
-
+```
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
-
+```
   
 **Ошибка 3**
 
 Неправильно (строка resource "random_password" "random_string" не совпадает со строкой  name  = "example_${random_password.random_string_fake.resuld}" хотя можно изменить строку  ):
 
 name  = "example_${random_password.random_string_fake.resuld}"  по аналогии с resource "random_password" "random_string" т.е сделать name  = "example_${random_password.random_string.resuld}" 
-
+```
 resource "random_password" "random_string" {
 resource "random_password" "random_string_fake" {
   length      = 16
@@ -74,14 +74,15 @@ resource "random_password" "random_string_fake" {
   min_lower   = 1
   min_numeric = 1
 }
-
+```
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
-
+```
   
 Правильно:
 
+```
 resource "random_password" "random_string_fake" {
   length      = 16
   special     = false
@@ -94,21 +95,23 @@ resource "random_password" "random_string_fake" {
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"  
-  
+```  
   
  **Ошибка 4** 
  
  Неправильно.  
  Неверно указана последняя буква в строке   name  = "example_${random_password.random_string_fake.resuld}". Нужно указать букву t .
   
- Правильно.  
+ Правильно.
+``` 
   resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.result}" 
-  
+```  
  
 5. Выполните код. В качестве ответа приложите вывод команды docker ps 
 
+**docker ps**
 **CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS          PORTS                  NAMES**
 **488b2bf41d4d   a7be6198544f   "/docker-entrypoint.…"   13 minutes ago   Up 13 minutes   0.0.0.0:8000->80/tcp   example_9hC1T4SAmr5fOtxR**
 
