@@ -68,6 +68,7 @@ resource "docker_container" "nginx" {
 Неправильно (строка resource "random_password" "random_string" не совпадает со строкой  name  = "example_${random_password.random_string_fake.resuld}" хотя можно изменить строку  ):
 
 name  = "example_${random_password.random_string_fake.resuld}"  по аналогии с resource "random_password" "random_string" т.е сделать name  = "example_${random_password.random_string.resuld}" 
+
 ```
 resource "random_password" "random_string" {
 resource "random_password" "random_string_fake" {
@@ -77,6 +78,8 @@ resource "random_password" "random_string_fake" {
   min_lower   = 1
   min_numeric = 1
 }
+```
+
 ```
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
