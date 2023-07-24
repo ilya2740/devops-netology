@@ -135,18 +135,18 @@ resource "docker_container" "nginx" {
 **Cодержимое файла terraform.tfstate:
 ```
 {
-  "version": 4,**
-  "terraform_version": "1.5.1",**
-  "serial": 1,**
-  "lineage": "588c7a1e-4160-ea7f-3598-ee075e54f992",**
-  "outputs": {},**
- "resources": [],**
-  "check_results": null**
+  "version": 4,
+  "terraform_version": "1.5.1",
+  "serial": 1,
+  "lineage": "588c7a1e-4160-ea7f-3598-ee075e54f992",
+  "outputs": {},
+ "resources": [],
+  "check_results": null
 }
 ```
 8. Объясните, почему при этом не был удален docker образ nginx:latest ? Ответ подкрепите выдержкой из документации провайдера.
 
-**Docker образ не был удален потому что установлен параметр keep_locally = true**
+Docker образ не был удален потому что установлен параметр keep_locally = true
 ```
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
@@ -154,7 +154,7 @@ resource "docker_image" "nginx" {
 }
 ```
 
-**Выдержка из документации:**
-**keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation.** 
-**If this is false, it will delete the image from the docker local storage on destroy operation.**
+Выдержка из документации:
+keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation.
+If this is false, it will delete the image from the docker local storage on destroy operation.
 
