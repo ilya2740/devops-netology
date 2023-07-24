@@ -6,14 +6,7 @@
 
 Terraform  установлен.  
 
- ![Версия установленного Terraform] (https://github.com/ilya2740/devops-netology/blob/main/Terraform_version.png)
-
-
-
-$ terraform --version  
-Terraform v1.5.2  
-on linux_amd64  
-Принт скрин добавил отдельным файлом к ответу на задание.
+ ![Версия установленного Terraform](https://github.com/ilya2740/devops-netology/blob/main/Terraform_version.png)
 
 
 
