@@ -79,7 +79,6 @@ resource "random_password" "random_string_fake" {
   min_numeric = 1
 }
 
-
 resource "docker_container" "1nginx" {
   image = docker_image.nginx.image_id
   name  = "example_${random_password.random_string_fake.resuld}"
@@ -95,7 +94,6 @@ resource "random_password" "random_string_fake" {
   min_lower   = 1
   min_numeric = 1
 }
-
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
@@ -135,25 +133,26 @@ resource "docker_container" "nginx" {
 7. Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
 
 **Cодержимое файла terraform.tfstate:
-
-**{
-**  "version": 4,**
-**  "terraform_version": "1.5.1",**
-**  "serial": 1,**
-**  "lineage": "588c7a1e-4160-ea7f-3598-ee075e54f992",**
-**  "outputs": {},**
-** "resources": [],**
-**  "check_results": null**
-**}**
-
+```
+{
+  "version": 4,**
+  "terraform_version": "1.5.1",**
+  "serial": 1,**
+  "lineage": "588c7a1e-4160-ea7f-3598-ee075e54f992",**
+  "outputs": {},**
+ "resources": [],**
+  "check_results": null**
+}
+```
 8. Объясните, почему при этом не был удален docker образ nginx:latest ? Ответ подкрепите выдержкой из документации провайдера.
 
 **Docker образ не был удален потому что установлен параметр keep_locally = true**
-
-**resource "docker_image" "nginx" {**
-**  name         = "nginx:latest"**
-**  keep_locally = true**
-**}**
+```
+resource "docker_image" "nginx" {
+  name         = "nginx:latest"
+  keep_locally = true
+}
+```
 
 **Выдержка из документации:**
 **keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation.** 
