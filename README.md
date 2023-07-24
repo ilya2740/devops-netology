@@ -127,9 +127,11 @@ $ docker ps
 
 При применении комманды   terraform apply  ключом -auto-approve  не будет возможности ознакомится с теми изменениями которые планируется применить при создании инфраструктуры. Все изменения будут применены автоматически, не нужно будет подтверждать применение изменений (approve) и набирать комманду "yes".
 
-**docker ps**
-**CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                  NAMES**
-**543c1ad37c66   a7be6198544f   "/docker-entrypoint.…"   6 minutes ago   Up 6 minutes   0.0.0.0:8000->80/tcp   example_9hC1T4SAmr5fOtxR**
+$ docker ps
+
+| CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | PORTS | NAMES |
+|--------------|-------|---------|---------|--------|-------|-------|
+| 543c1ad37c66 | a7be6198544f | "/docker-entrypoint.…" | 6 minutes ago | Up 6 minutes | 0.0.0.0:8000->80/tcp | example_9hC1T4SAmr5fOtxR |
 
 
 7. Уничтожьте созданные ресурсы с помощью terraform. Убедитесь, что все ресурсы удалены. Приложите содержимое файла terraform.tfstate.
