@@ -116,8 +116,8 @@ resource "docker_container" "nginx" {
 
 $ docker ps  
 
-|CONTAINER ID|   IMAGE    |      COMMAND  |                CREATED   |       STATUS  |   PORTS  |  NAMES |
-------------- ----------- ------------ ----------- ----------- ---------- -----------   
+|CONTAINER ID|   IMAGE    |      COMMAND  |CREATED   |       STATUS  |   PORTS  |  NAMES |
+|------------|-----------|------------|-----------|-----------|----------|-----------|   
 |488b2bf41d4d|a7be6198544f| "/docker-entrypoint.…" |13 minutes ago|Up 13 minutes| 0.0.0.0:8000->80/tcp | example_9hC1T4SAmr5fOtxR |
 
 6. Замените имя docker-контейнера в блоке кода на hello_world, выполните команду terraform apply -auto-approve. Объясните своими словами, в чем может быть опасность применения ключа -auto-approve ? 
