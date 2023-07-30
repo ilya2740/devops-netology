@@ -85,7 +85,7 @@ terraform output
 ```
 vm_external_ip_address = {
   "yandex_compute_instance.platform_db" = "51.250.10.134"
-  "yandex_compute_instance.platform_web" = "158.160.109.178"
+  "yandex_compute_instance.platform_web" = "158.160.117.58"
 }
 ```
 
