@@ -4,8 +4,12 @@
 Задание 1
 
 Вопрос 2
+Виртуальная машина:
  ![Виртуальная машина]([https://github.com/ilya2740/devops-netology/blob/terraform-02/Task1_1.png])
 
+Подключение по ssh:
+ ![Виртуальная машина]([https://github.com/ilya2740/devops-netology/blob/terraform-02/Task1_2.png])
+ 
 Вопрос 4
 
 Ошибки допущенные в файле main.tf
