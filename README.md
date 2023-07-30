@@ -1,10 +1,10 @@
-Домашнее задание к занятию «Основы Terraform. Yandex Cloud»
+# Домашнее задание к занятию «Основы Terraform. Yandex Cloud»
 
 
 Задание 1
 
 Вопрос 2
-
+ ![Версия установленного Terraform](https://github.com/ilya2740/devops-netology/blob/main/Terraform_version.png)
 
 Вопрос 4
 
