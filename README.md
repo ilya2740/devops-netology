@@ -110,3 +110,29 @@ terraform console
 
 
 Задание 7
+Задание 7 
+
+1.
+```
+local.test_list["1"]
+    "staging"
+```
+
+4.
+```
+   length(local.test_list)
+    3
+```
+ 
+6.
+```
+ local.test_map["admin"]
+    "John"
+```
+
+9.
+ ```
+   expresion = "${ "John is admin for production server based on OS" } ${ local.servers.production["image"] } ${ "with" } ${local.servers.production.cpu} ${"vcpu,"}  ${local.servers.production.ram}  ${"ram and"} ${length(local.servers.production.disks) } ${"virtual disks"}"
+
+"John is admin for production server based on OS ubuntu-20-04 with 10 vcpu,  40  ram and 4 virtual disks"
+```
