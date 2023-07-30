@@ -107,3 +107,6 @@ terraform console
 
 
 Задание 6
+
+
+Задание 7
