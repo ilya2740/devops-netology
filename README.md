@@ -107,12 +107,13 @@ locals {
 ```
 Вывод из terraform console
 
+```
 terraform console
 > local.name_web
 "netology-develop-platform-web-standard-v3-ubuntu-2204-lts"
 > local.name_db
 "netology-develop-platform-db-standard-v3-ubuntu-2204-lts"
-
+```
 
 Задание 6
 
