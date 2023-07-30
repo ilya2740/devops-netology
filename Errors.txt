@@ -1,0 +1,14 @@
+│ Error: Error while requesting API to create instance: server-request-id = 0161b903-9420-4530-aa28-c65b15455d03 server-trace-id = 40aa9157dfd2e47e:440583a678d73d82:40aa9157dfd2e47e:1 client-request-id = bec38715-ea7d-43fe-a8b2-eb88038dc3fd client-trace-id = f3029a3e-bd72-4c33-aa4e-2aee7ce29851 rpc error: code = FailedPrecondition desc = Platform "standart-v4" not found
+
+
+
+*******************************************************
+
+
+
+╷
+│ Error: Error while requesting API to create instance: server-request-id = cd3672b0-e976-41bd-b1d1-b13bcea4e880 server-trace-id = e5be80b13db9bb72:8d39db4211da61f7:e5be80b13db9bb72:1 client-request-id = 8cffc370-d327-4a85-8373-bb199e8c7419 client-trace-id = 539aacdc-e19e-4d09-9bef-4fd8e679a7e2 rpc error: code = InvalidArgument desc = the specified core fraction is not available on platform "standard-v3"; allowed core fractions: 20, 50, 100
+
+**********************************************************
+
+│ Error: Error while requesting API to create instance: server-request-id = 4e49e6ce-d077-4232-a7a7-50d9effe1a03 server-trace-id = 68dcbb494cc0e55:65cf98093495fb43:68dcbb494cc0e55:1 client-request-id = e397be41-2c8f-466a-948e-f98e1af2cb58 client-trace-id = 2abc42bb-5d02-4a62-854c-c728bf6ef576 rpc error: code = InvalidArgument desc = the specified number of cores is not available on platform "standard-v3"; allowed core number: 2, 4
