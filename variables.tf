@@ -1,45 +1,5 @@
 ###cloud vars
 
-#variable "vm_web_family" {
-#  type        = string
-#  default     = "ubuntu-2204-lts"
-#  description = "Ubuntu family name"
-#}
-
-
-#variable "vm_web_name" {
-#  type        = string
-#  default     = "netology-develop-platform-web"
-#  description = "Platform name"
-#}
-
-
-#variable "vm_web_platform_id" {
-#  type        = string
-#  default     = "standard-v3"
-#  description = "platform_id name"
-#}
-
-
-#variable "vm_web_cores" {
-#  type        = number
-#  default     = 2
-#  description = "cores namber"
-#}
-
-
-#variable "vm_web_memory" {
-#  type        = number
-#  default     = 1
-#  description = "memory namber"
-#}
-
-
-#variable "vm_web_core_fraction" {
-#  type        = number
-#  default     = 50
-#  description = "core fraction namber"
-#}
 
 
 variable "resources_web" {
@@ -99,14 +59,6 @@ variable "vpc_name" {
   description = "VPC network & subnet name"
 }
 
-
-###ssh vars
-
-#variable "vms_ssh_root_key" {
-#  type        = string
-#  #default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMdnCJVCblNgg2wBAomp1kk04//yJsxxQCZEfKFcAp+A user@debian"
-#  description = "ssh-keygen -t ed25519"
-#}
 
 
 variable "metadata" {
