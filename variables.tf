@@ -71,10 +71,25 @@ variable "public_key" {
   default = ""
 }
 
+variable "vm_names" {
+  description = "Create VM with these names"
+  type        = list(string)
+  default     = ["web1", "web2"]
+}
 
 
-
-
+variable "servers" {
+    type = list(object({
+        name  = string,
+        #size = string,
+        image = string,
+        #region = string
+        tags = list(string)
+        cores  =  string,
+        memory =  string,
+        core_fraction =  string,
+    }))
+}
 
 
 
