@@ -9,3 +9,10 @@
  ![Группы безопастности созданые руками](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_Security_Groups_inboud_rules__2023-09-08_18-36.png)
 
  ![Группы безопастности созданые terraform](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_example_dynamic_inboud_rules__2023-09-08_18-36.png)
+
+# Задание 2
+Код в ветке
+# Задание 3
+Код в ветке
+# Задание 4
+Скриншоты файлов
