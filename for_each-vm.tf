@@ -1,29 +1,35 @@
-#создаем 2 идентичные ВМ
-resource "yandex_compute_instance" "example" {
-  
-  count = length(var.vm_names)
-  name  = var.vm_names[count.index]
-  platform_id = "standard-v1"
+#создаем 2 разные ВМ с разными параметрами
+resource "yandex_compute_instance" "main_replica" {
+
+    for_each = { for server in var.servers : server.name => server }
+    
+    name    =  each.key
+    #image   =  each.value.image
+    #size    =  each.value.size
+    #region  =  each.value.region
+    #tags   = each.value.tags
 
 
-  #count = 2
-  #name        = "web-${count.index}"
+    resources {
+    cores  = each.value.cores
+    memory = each.value.memory
+    core_fraction = each.value.core_fraction
+  }
 
-  #resources {
-  #  cores  = 2
-  #  memory = 1
-  #  core_fraction = 20
-  #}
 
-  boot_disk {
+    boot_disk {
     initialize_params {
+      #image_id =  each.value.image
       image_id = data.yandex_compute_image.ubuntu-2004-lts.image_id
       type = "network-hdd"
-      size = 5
+      size = "5"
     }   
   }
 
-  metadata = {
+
+depends_on = [ yandex_compute_instance.web1_web2 ]
+
+metadata = {
     ssh-keys = "ubuntu:${var.public_key}"
   }
 
@@ -34,4 +40,9 @@ resource "yandex_compute_instance" "example" {
     nat       = true
   }
   allow_stopping_for_update = true
+
+
+
+#depends_on = [yandex_compute_instance.main_replica]
+
 }

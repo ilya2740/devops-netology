@@ -49,6 +49,9 @@ variable "folder_id" {
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
 
+
+
+
 variable "default_zone" {
   type        = string
   default     = "ru-central1-a"
@@ -85,12 +88,65 @@ variable "servers" {
         image = string,
         #region = string
         tags = list(string)
-        cores  =  string,
-        memory =  string,
-        core_fraction =  string,
+        cores  =  number,
+        memory =  number,
+        core_fraction =  number,
+        disk = number
     }))
+}
+
+variable "Disks_names_1Gb" {
+  description = "Create 1Gb disks with these names"
+  type        = list(string)
+  default     = ["disk1", "disk2", "disk3"]
 }
 
 
 
+
+
+
+variable "another_disks" {
+  type = list(object({
+    name = string
+    
+  }))
+  default = [
+    {
+      name = "disk1"
+    },
+    {
+      name = "disk2"
+    },
+    {
+      name = "disk3"
+
+    }
+  ]
+}
+
+
+
+
+
+
+
+variable "sg_ports" {
+  type        = list(number)
+  description = "list of ingress ports"
+  default     = ["1", "2" , "3"]
+}
+
+
+variable "storage" {
+
+   type = list(object({
+        name = string,
+        cores = number,
+        memory = number,
+        core_fraction = number
+  
+   }))
+
+}
 

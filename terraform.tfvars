@@ -9,6 +9,7 @@ servers = [
         cores  = "2"
         memory = "1"
         core_fraction = "20"
+        disk = "1"
 
     },
     {
@@ -17,10 +18,37 @@ servers = [
         image = "data.yandex_compute_image.ubuntu-2004-lts.image_id"
         #region = "lon1",
         tags = ["replica"]
-        cores  = "5"
+        cores  = "4"
         memory = "2"
         core_fraction = "20"
+        disk = "1"
     } 
 ]
 
 
+storage = [
+    {
+       name = "storage",
+       cores = 2,
+       memory = 1,
+       core_fraction = 20
+   
+
+
+    }
+]
+
+
+
+another_disks = [
+{
+        name       = "disk1"
+
+},
+{       name       = "disk2"
+},
+{
+        name       = "disk3"
+}
+
+]
