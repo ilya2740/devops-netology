@@ -16,3 +16,8 @@
 Код в ветке
 # Задание 4
 Скриншоты файлов
+![Инвентори файл](https://github.com/ilya2740/devops-netology/blob/terraform-03/inventory_file_2023-09-08_18-44.png)
+
+![Ансибл файл](https://github.com/ilya2740/devops-netology/blob/terraform-03/Ansible_file_2023-09-08_18-43.png)
+
+
