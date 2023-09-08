@@ -2,7 +2,7 @@
 
 # Задание 1
 
-Группы безопастности.
+Группы безопасности.
 
  ![Группы безопастности все](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_2023-09-08_18-36.png)
 
