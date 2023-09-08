@@ -1,23 +1,31 @@
-# Домашние задания по модулю «Облачная инфраструктура. Terraform»
+# Домашнее задание к занятию «Управляющие конструкции в коде Terraform»
 
-В этом репозитории расположены ваши домашние задания к каждой лекции. 
+# Задание 1
 
-Обязательными к выполнению являются задачи без указания звездочки. Их выполнение необходимо для получения зачета и диплома о профессиональной переподготовке.
+Группы безопасности.
 
-Задачи со звездочкой (*) являются дополнительными задачами и/или задачами повышенной сложности. Они не являются обязательными к выполнению, но помогут вам глубже понять тему.
+ ![Группы безопастности все](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_2023-09-08_18-36.png)
 
-Любые вопросы по решению задач задавайте в чате курса.
+ ![Группы безопастности созданые руками](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_Security_Groups_inboud_rules__2023-09-08_18-36.png)
 
+ ![Группы безопастности созданые terraform](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_example_dynamic_inboud_rules__2023-09-08_18-36.png)
 
-1. [Ввдение в Terraform](01/hw-01.md)
+# Задание 2
+Код в ветке
+# Задание 3
+Код в ветке
+# Задание 4
+Скриншоты файлов ansible.tf , inventory.tftpl
 
-2. [Основы Terraform. Yandex Cloud](02/hw-02.md)
+![Инвентори файл](https://github.com/ilya2740/devops-netology/blob/terraform-03/inventory_file_2023-09-08_18-44.png)
 
-3. [Управляющие конструкции в коде Terraform](03/hw-03.md)
+![Ансибл файл](https://github.com/ilya2740/devops-netology/blob/terraform-03/Ansible_file_2023-09-08_18-43.png)
 
-4. [Продвинутые методы работы с Terraform](04/hw-04.md)
+# Задание 5
+Скриншот файла terraform output
 
-5. [Использование Terraform в команде](05/hw-05.md)
+![Terraform output](https://github.com/ilya2740/devops-netology/blob/terraform-03/Output_file_2023-09-08_18-46.png)
 
-
+# Задание 6
+Код в ветке
 
