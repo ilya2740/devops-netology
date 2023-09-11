@@ -1,12 +1,4 @@
 
-#resource "yandex_vpc_security_group" "group1" {
-#  name        = "My security group"
-#  description = "description for my security group"
-#  network_id  = "${yandex_vpc_network.lab-net.id}"
-#}
-
-
-
 resource "yandex_compute_disk" "Disks_1Gb" {
 
   count = length(var.Disks_names_1Gb)
@@ -18,15 +10,7 @@ resource "yandex_compute_disk" "Disks_1Gb" {
 
 resource "yandex_compute_instance" "storage" {
 
-    
-    
- #   name    =  var.storage.name
 
- #   resources {
- #   cores  = var.storage.cores["cores"]
- #   memory = var.storage.memory["memory"]
- #   core_fraction = var.storage["core_fraction"]
- # }
 
  name = "storage"
 
@@ -43,7 +27,6 @@ resource "yandex_compute_instance" "storage" {
 # First disk (bootable)
     boot_disk {
     initialize_params {
-      #image_id =  each.value.image
       image_id = data.yandex_compute_image.ubuntu-2004-lts.image_id
       type = "network-hdd"
       size = "5"

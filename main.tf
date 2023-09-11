@@ -1,13 +1,3 @@
-#resource "yandex_vpc_network" "develop" {
-#  name = var.vpc_name
-#}
-#resource "yandex_vpc_subnet" "develop" {
-#  name           = var.vpc_name
-#  zone           = var.default_zone
-#  network_id     = yandex_vpc_network.develop.id
-#  v4_cidr_blocks = var.default_cidr
-#}
-
 
 terraform {
   required_providers {
@@ -94,10 +84,6 @@ resource "local_file" "hosts_cfg" {
 
 
 resource "null_resource" "web_hosts_provision" {
-#Ждем создания инстанса
-#depends_on = [yandex_compute_instance.example]
-
-#depends_on = [yandex_compute_instance.web1_web2]
 
 #Добавление ПРИВАТНОГО ssh ключа в ssh-agent
   provisioner "local-exec" {

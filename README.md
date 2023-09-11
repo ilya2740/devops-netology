@@ -10,10 +10,8 @@
 
  ![Группы безопастности созданые terraform](https://github.com/ilya2740/devops-netology/blob/terraform-03/Security_groups_example_dynamic_inboud_rules__2023-09-08_18-36.png)
 
-# Задание 2
-Код в ветке
-# Задание 3
-Код в ветке
+
+
 # Задание 4
 Скриншоты файлов ansible.tf , inventory.tftpl
 
@@ -26,6 +24,5 @@
 
 ![Terraform output](https://github.com/ilya2740/devops-netology/blob/terraform-03/Output_file_2023-09-08_18-46.png)
 
-# Задание 6
-Код в ветке
+
 

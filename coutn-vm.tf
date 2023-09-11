@@ -1,8 +1,11 @@
 #создаем 2 идентичные ВМ с разными именами
 resource "yandex_compute_instance" "web1_web2" {
+
+for_each = toset([ "1", "2" ])
+
+name = "web${each.key}"
+
   
-  count = length(var.vm_names)
-  name  = var.vm_names[count.index]
   platform_id = "standard-v1"
 
  resources { 
@@ -32,12 +35,6 @@ resource "yandex_compute_instance" "web1_web2" {
     nat       = true
     security_group_ids = [yandex_vpc_security_group.example.id]
 
-    #dynamic "security_groups" {
-   #for_each = yandex_compute_disk.Disks_1Gb[*].id
-   #for_each = yandex_vpc_security_group.example[*].id
-    
-   # content{
-   #security_group_ids = security_groups.value
     
  } 
 
