@@ -27,5 +27,5 @@
 # Задание 6
 Ссылка на код в файле hosts.tftpl
 
-https://github.com/ilya2740/devops-netology/blob/42f0b24a12d4567592875075a92132eb0c6f2691/hosts.tftpl
+![Terraform output] https://github.com/ilya2740/devops-netology/blob/42f0b24a12d4567592875075a92132eb0c6f2691/hosts.tftpl
 
